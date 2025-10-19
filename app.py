@@ -7,7 +7,7 @@ from shutil import rmtree, copytree
 from subprocess import Popen
 from time import sleep
 
-with open(Path('steam_path.txt'), 'r') as file:
+with open(Path('steam_path.txt'), 'r') as file:        # Type the path of your steam files (i.e. where your among us files are) into the file 'steam_path.txt' if the program isnt running properly
     path = file.readline()
 
 steamPath = path
@@ -119,6 +119,7 @@ AUverKeys = list(AUversions.keys())
 
 keys = data_str2.strip().split('\n')
 
+# GUI with tkinter
 root = tk.Tk()
 AmongUs_version = tk.StringVar()
 consoleTxt = tk.StringVar(value="Launching the game may take time. Be patient.")
@@ -146,5 +147,6 @@ dropdown.place(x=160, y=50)
 console.place(x=200, y=95, anchor="center")
 launch.place(x=200, y=140, anchor="center")
 note1.place(x=0, y=170)
+
 
 root.mainloop()
